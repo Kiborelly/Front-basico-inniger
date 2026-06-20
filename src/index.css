@@ -1,0 +1,33 @@
+:root{
+    --black: #0c0a0b;
+    --black-soft: #151213;
+    --burgundy: #3d0c12;
+    --burgundy-light: #5c1521;
+    --burgundy-glow: rgba(92,21,33,0.35);
+    --pink: #FF2970 ;
+    --pink-light: #FE5F93   ;
+    --cream: #f2ede6;
+    --cream-dim: rgba(242,237,230,0.65);
+    --cream-faint: rgba(242,237,230,0.35);
+    --line: rgba(201,160,80,0.18);
+    --pink-neon: #ff94b8a1;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+  
+html{
+    scroll-behavior:smooth;
+}
+  
+body{
+    background:var(--black);
+    color:var(--cream);
+    font-family:'Inter',sans-serif;
+    font-weight:300;
+    overflow-x:hidden;
+}
+
+h1,h2,h3,h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }

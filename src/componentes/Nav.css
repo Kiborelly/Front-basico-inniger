@@ -1,0 +1,186 @@
+/* ==========================================================================
+   1. ESTILOS GERAIS E RESETS DO HEADER
+   ========================================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 5%;
+    background: rgba(12, 10, 11, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    transition: padding 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   2. LOGO e MENU DE NAVEGAÇÃO (DESKTOP)
+   ========================================================================== */
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    font-style: italic;
+    color: var(--cream);   
+    display: flex;                 
+}
+
+.carac-esp {
+    color: var(--pink);
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+nav a {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 1px;
+    background: var(--pink);
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================================================
+   3. BOTÕES E AÇÕES (CARRINHO, PERFIL, PESQUISA)
+   ========================================================================== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+}
+
+.icon-btn {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    color: var(--cream);
+}
+
+.icon-btn:hover {
+    border-color: var(--pink);
+    background: rgba(201, 160, 80, 0.08);
+}
+
+.cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: var(--pink);
+    color: #000;
+    font-size: 0.65rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* Oculto por padrão no Desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* ==========================================================================
+   4. RESPONSIVIDADE (TELAS MENORES QUE 720px)
+   ========================================================================== */
+@media (max-width: 824px) {
+    nav ul {
+        display: none; /* Esconde o menu de texto */
+    }
+
+    .menu-toggle {
+        display: flex; /* Exibe o botão hambúrguer alinhado */
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--cream);
+        font-size: 1.4rem;
+        width: 38px;
+        height: 38px;
+        transition: color 0.3s;
+    }
+
+    .menu-toggle:hover {
+        color: var(--pink);
+    }
+}
+
+/* ==========================================================================
+   2. LOGO e MENU DE NAVEGAÇÃO (DESKTOP)
+   ========================================================================== */
+header img {
+    /* Define uma altura máxima usando 'rem' para que respeite o zoom do navegador */
+    height: 2.5rem; 
+    width: auto; /* Mantém a proporção da imagem sem distorcer */
+    
+    /* Garante um comportamento fluido */
+    max-width: 100%;
+    object-fit: contain;
+    
+    transition: height 0.3s ease;
+}
+
+/* Opcional: Se quiser que a logo diminua um pouco em telas mobile */
+@media (max-width: 824px) {
+    header img {
+        height: 2rem; 
+    }
+}
+
+.eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--pink);
+    font-weight: 500;
+}
