@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 export default function Nav() {
@@ -17,8 +18,7 @@ export default function Nav() {
 
             <div className="nav-actions">
                 <div className="icon-btn">⌕</div>
-                <div className="icon-btn">👤</div>
-
+                <Link to="/login" className="icon-btn">👤</Link>
                 <div className="icon-btn">
                     ⛃
                     <span className="cart-count">0</span>
