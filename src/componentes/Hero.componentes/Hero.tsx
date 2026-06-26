@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section className="hero">
           <div className="hero-bg">
-            <img src="/img/fundo-principal-2.png" alt="Ambiente escuro e elegante" />
+            <img className="img-hero"src="/img/fundo-principal-2.png" alt="Ambiente escuro e elegante" />
           </div>
           <div className="hero-content">
             <span className="eyebrow">Curadoria Premium · Desde 2016</span>
