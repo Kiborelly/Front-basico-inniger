@@ -1,27 +1,23 @@
 import Logo from "../componentes/Logo.componentes/Logo";
 import SocialButton from "../componentes/LoginButton.componentes/LoginButton";
+import LoginForm from "../componentes/LoginForm.componentes/LoginForm";
 
 export default function Login() {
     return (
         <div className="flex flex-row bg-black-soft min-h-screen place-content-between max-[720px]:justify-center max-[720px]:items-center">
             <div className="flex justify-center items-center bg-black-soft w-[50vw]">      
-                <div className="bg-black-main p-[20px] rounded-[10px] w-[400px] flex flex-col justify-center items-center place-content-between">
+                <div className="bg-none p-[20px] rounded-[10px] w-[400px] flex flex-col justify-center items-center place-content-between">
                     <div>
                         <div className="bg-none p-[20px]"><Logo /></div>
                     </div>
                     <div>
                         <h1 className=" bg-none text-[clamp(2rem,2vw,4.4rem)]">
-                            Seja bem-vindo(a) de volta!
+                            Seja bem-vindo(a)
                         </h1>
                     </div>
                     <form className="">
-                        <div className="bg-[#21a632]">
-                            <p>Form content</p>
-                            <p>Form content</p>
-                            <p>Form content</p>
-                            <p>Form content</p>
-                            <p>Form content</p>
-                            <p>Form content</p>
+                        <div className="bg-none">
+                            <LoginForm />
                         </div>
                     </form>
                     <div className="flex flex-col justify-center items-center gap-[20px] p-[20px]">
