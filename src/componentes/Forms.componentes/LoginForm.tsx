@@ -1,13 +1,32 @@
+import { auth } from "../../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState, type FormEvent } from "react";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Aqui você conectará com sua API futuramente
-    console.log("Enviando dados:", { email, password });
+
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      console.log("Login realizado!");
+      console.log(userCredential.user);
+
+      // Redireciona para Home
+      navigate("/");
+
+    } catch (error: any) {
+      console.error("Erro ao logar:", error.code, error.message);
+    }
   };
 
   return (
@@ -53,6 +72,16 @@ export default function LoginForm() {
                      focus:outline-none focus:border-pink-main focus:ring-1 focus:ring-pink-main
                      transition-all duration-200"
         />
+      </div>
+
+      {/* Link para registro */}
+      <div className="text-center">
+        <Link
+          to="/register"
+          className="text-sm text-pink-light hover:text-pink-main transition-colors font-inter"
+        >
+          Não tem conta? Registre-se
+        </Link>
       </div>
 
       {/* Botão de Enviar */}

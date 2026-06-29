@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
+import InfConta from "../pages/InfConta";
+import path from "path/win32";
+import Register from "../pages/Register";
 
 
 export const router = createBrowserRouter([
@@ -11,5 +14,14 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  { 
+    path: "/account",
+    element: <InfConta />
+  },
+
+  {
+    path: "/Register",
+    element: <Register />
   },
 ]);

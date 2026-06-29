@@ -1,6 +1,6 @@
 import Logo from "../componentes/Logo.componentes/Logo";
 import SocialButton from "../componentes/LoginButton.componentes/LoginButton";
-import LoginForm from "../componentes/LoginForm.componentes/LoginForm";
+import LoginForm from "../componentes/Forms.componentes/LoginForm";
 
 export default function Login() {
     return (
@@ -15,11 +15,11 @@ export default function Login() {
                             Seja bem-vindo(a)
                         </h1>
                     </div>
-                    <form className="">
+                    <div className="">
                         <div className="bg-none">
                             <LoginForm />
                         </div>
-                    </form>
+                    </div>
                     <div className="flex flex-col justify-center items-center gap-[20px] p-[20px]">
                         <p>Ou</p>
                         <div className="flex flex-row justify-center items-center gap-4 w-full mt-2">
