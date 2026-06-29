@@ -4,7 +4,7 @@ import { useAuth } from "../../context/AuthContext";
 import "./Nav.css";
 
 export default function Nav() {
-  const { user } = useAuth();
+  const authContext = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -23,7 +23,7 @@ export default function Nav() {
 
       <div className="nav-actions">
         <div className="icon-btn">⌕</div>
-        {user ? (
+        {authContext?.user ? (
           <button onClick={() => navigate("/account")} className="icon-btn">👤</button>
         ) : (
           <Link to="/login" className="icon-btn">👤</Link>
