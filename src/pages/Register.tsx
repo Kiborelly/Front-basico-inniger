@@ -1,9 +1,8 @@
 import Logo from "../componentes/Logo.componentes/Logo";
 import SocialButton from "../componentes/LoginButton.componentes/LoginButton";
-import LoginForm from "../componentes/Forms.componentes/LoginForm";
 import RegisterForm from "../componentes/Forms.componentes/RegisterForm";
 
-export default function Login() {
+export default function Register() {
     return (
         <div className="flex flex-row bg-black-soft min-h-screen place-content-between max-[720px]:justify-center max-[720px]:items-center">
             <div className="flex justify-center items-center bg-black-soft w-[50vw]">      
