@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import InfConta from "../pages/InfConta";
-import path from "path/win32";
 import Register from "../pages/Register";
 
 
